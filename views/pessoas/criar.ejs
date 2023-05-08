@@ -1,0 +1,57 @@
+<!doctype html> 
+
+<html>
+
+    <head>
+    
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel='stylesheet' type='text/css' media='screen' href="/estilo/estilo.css"/>
+      
+    
+    
+     
+        <title>Cadastro</title>
+    </head>
+
+    <body>  
+
+
+        <div>
+            <h1 id="titulo">Cadastro</h1>
+            <p id="subtitulo">Complete suas informações:</p>
+            <br>
+        </div>
+
+        
+        <form method="post" action="/pessoas/criar">
+
+            <fieldset class="grupo">
+                
+                <div class="campo">
+                    <label for="nome" placeholder="Digite seu Nome"><strong>Nome:</strong></label>
+                    <input type="text" name="nome" id="nome" required>
+                </div>
+
+               <br/>
+                <div class="campo">
+                    <label for="sobrenome" placeholder="Digite seu Sobrenome"><strong>Sobrenome:</strong></label>
+                    <input type="text" name="sobrenome" id="sobrenome" required>
+                </div>
+                <br/>
+
+            
+            <div class="campo">
+                <label for="idade" placeholder="Digite sua Idade"><strong>Idade:</strong></label>
+                <input type="idade" name="idade" id="idade" required>
+            </div>
+        </fieldset> 
+        <br/>
+            
+            <button class="botao" type="submit" onsubmit="">Concluído</button>            
+
+        </form>
+
+    </body>
+
+</html>
