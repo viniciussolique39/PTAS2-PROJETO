@@ -23,6 +23,7 @@ app.get('/pessoas/criar', async function(req, res){
   res.render('pessoas/criar', { pessoas });
 })
 
+
 app.post('/pessoas/criar', async function(req, res){
   try {
       await pessoa.create(req.body);
@@ -36,3 +37,13 @@ app.post('/pessoas/criar', async function(req, res){
 app.listen(3000, function() {
   console.log('App de Exemplo escutando na porta 3000!')
 });
+
+app.get('/pessoas/deletar', async function(req, res){
+  try {
+      await pessoa.destroy({ where: { id: req.query.id } });
+      res.redirect('/Pessoas')
+  } catch (err) {
+      console.error(err);
+      res.status(500).json({ message: 'Ocorreu um erro ao criar o usuário.' });
+  }
+})
