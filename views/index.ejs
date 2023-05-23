@@ -8,6 +8,9 @@
     <title>Listagem de Cadastros</title>
 </head>
 <body>
+
+    <h1><p>Usuários Cadastrados</p></h1>
+    <br/>
     <% pessoas.forEach((pessoa) => { %>
         <%= pessoa.nome %>
         <%= pessoa.sobrenome %>
@@ -16,6 +19,8 @@
     <br/>
        
     <% }) %>
+
+    <br/>
 
     <a href="/pessoas/criar">Voltar ao Formulário</a>
 </body>
